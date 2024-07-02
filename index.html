@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Electric bill calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-item-1">
+        <div class="bill">
+          <div class="error-msg">
+            <span class="heads">Select appliances</span>
+            <span class="heads msg hidden">Can't be empty</span>
+          </div>
+          <!-- <br /> -->
+          <div class="appliances-wrapper">
+            <select name="appliances" class="appliances" id="appliances">
+              <option value=""></option>
+              <option value="Standing fan">Standing fan</option>
+              <option value="Electric iron">Electric iron</option>
+              <option value="Refrigerator">Refrigerator</option>
+              <option value="Electric kettle">Electric kettle</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="duration-menu">
+          <span class="heads">Duration (/hr)</span>
+          <br />
+          <div class="duration-btns">
+            <button class="hours" value="1">1</button>
+            <button class="hours" value="2">2</button>
+            <button class="hours" value="3">3</button>
+            <button class="hours" value="4">4</button>
+            <button class="hours" value="5">5</button>
+            <div>
+              <button class="custom-btn">Custom</button>
+              <input type="number" class="custom-input hidden" />
+            </div>
+          </div>
+        </div>
+
+        <div class="Band-selection">
+          <div class="error-msg">
+            <span class="heads">Band selection</span>
+            <span class="heads msg hidden">Please select a band</span>
+          </div>
+          <!-- <br /> -->
+          <div class="band-wrapper">
+            <!-- <img class="icon" src="images/icon-person.svg" alt="" /> -->
+            <div id="band-A-radio-">
+              <span class="bands-s"
+                ><input
+                  class="bands"
+                  type="radio"
+                  name="Band-select"
+                  value="255"
+                />A</span
+              >
+            </div>
+            <div id="band-B-radio">
+              <span class="bands-s"
+                ><input
+                  class="bands"
+                  type="radio"
+                  name="Band-select"
+                  value="225"
+                />B</span
+              >
+            </div>
+            <div id="band-C-radio">
+              <span class="bands-s"
+                ><input
+                  class="bands"
+                  type="radio"
+                  name="Band-select"
+                  value="50"
+                />C</span
+              >
+            </div>
+            <div id="band-D-radio">
+              <span class="bands-s"
+                ><input
+                  class="bands"
+                  type="radio"
+                  name="Band-select"
+                  value="43"
+                />D</span
+              >
+            </div>
+            <div id="band-E-radio">
+              <span class="bands-s"
+                ><input
+                  class="bands"
+                  type="radio"
+                  name="Band-select"
+                  value="40.71"
+                />E</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLEX ITEM 2 -->
+
+      <div class="flex-item-2">
+        <!-- Tip amount -->
+        <div class="totals">
+          <div class="kilowatt-amount">
+            <div class="results">
+              <span class="heads">Power used</span> <br />
+              <span class="sub">/ day</span>
+            </div>
+            <div class="kilowatt-result" id="kilowatt-result">₦0.00</div>
+          </div>
+          <!-- Total -->
+          <div class="total-amount">
+            <div class="results">
+              <span class="heads">Total cost</span> <br />
+              <span class="sub">/ day</span>
+            </div>
+            <div class="total-result" id="total-result">₦0.00</div>
+          </div>
+        </div>
+
+        <button type="reset" class="rst-btn" id="reset">RESET</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

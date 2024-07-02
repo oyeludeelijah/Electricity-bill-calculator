@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Strong-cyan2: hsl(173, 66%, 69%);
+  --Strong-cyan3: hsla(173, 66%, 69%, 0.244);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Very-dark-cyan1: hsla(183, 100%, 15%, 0.418);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --error-msg: hsla(16, 83%, 46%, 0.726);
+}
+
+body {
+  background-color: var(--Light-grayish-cyan);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.appliance-wrapper {
+  width: 100%;
+}
+
+.appliances {
+  width: 100%;
+}
+
+select {
+  padding: 0.5rem;
+}
+
+select:focus {
+  outline: none;
+}
+
+.duration-menu {
+  margin-bottom: 2rem;
+}
+
+.duration-btns {
+  display: grid;
+  grid-template-columns: 7rem 7rem 7rem;
+  gap: 0.7rem;
+}
+
+.hours,
+.custom-btn {
+  border: none;
+  padding: 0.5rem 0;
+  /* width: 6rem; */
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.hours {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.hours:hover,
+.custom-btn:hover {
+  background-color: var(--Light-grayish-cyan);
+  /* background-color: hsl(183, 70%, 78%); */
+  color: var(--Very-dark-cyan);
+}
+
+/* .tips:active, */
+.custom-btn:active {
+  background-color: var(--Strong-cyan2);
+}
+
+.custom-btn {
+  color: var(--Grayish-cyan);
+  width: 100%;
+}
+
+.custom-input {
+  width: 100%;
+  height: 100%;
+}
+
+.band-wrapper,
+.duration-btns {
+  margin-top: 0.3rem;
+}
+
+input,
+.custom-btn {
+  background-color: var(--Very-light-grayish-cyan);
+}
+
+.logo img {
+  width: 7rem;
+}
+
+.container {
+  background-color: var(--White);
+  padding: 1.5rem;
+
+  display: flex;
+  gap: 2rem;
+  border-radius: 1rem;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.heads {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.flex-item-1 {
+  padding: 0.5rem;
+  width: 23.5rem;
+}
+
+.flex-item-1 .heads {
+  color: var(--Grayish-cyan);
+  margin-bottom: 0.5rem;
+}
+
+.band-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: max-content;
+  width: 100%;
+  background-color: var(--Very-light-grayish-cyan);
+  /* background-color: black; */
+  border: 1.5px solid transparent;
+  border-radius: 0.3rem;
+}
+
+.band-wrapper:hover,
+.custom-input:hover,
+.custom-input:focus {
+  border: 1.5px solid var(--Strong-cyan);
+}
+
+.bands-s {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  color: var(--Very-dark-cyan);
+  font-weight: 600;
+}
+
+input {
+  border: none;
+  width: 100%;
+  height: 3rem;
+  /* padding: 0.2rem; */
+  padding-right: 1rem;
+  font-weight: 600;
+  color: var(--Very-dark-cyan);
+
+  border-radius: 0.3rem;
+  text-align: right;
+
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: var(--Grayish-cyan);
+}
+
+input:focus {
+  outline: none;
+}
+
+/* input:active {
+  color: black;
+} */
+/* input::placeholder {
+} */
+
+.icon {
+  width: 0.8rem;
+}
+
+.bill {
+  margin-bottom: 1.5rem;
+  /* margin-bottom: 2rem; */
+}
+
+.tip-menu {
+  margin-bottom: 2rem;
+}
+
+.tip-btns {
+  display: grid;
+  grid-template-columns: 7rem 7rem 7rem;
+  gap: 0.7rem;
+}
+
+.tips,
+.custom-btn {
+  border: none;
+  padding: 0.5rem 0;
+  /* width: 6rem; */
+  font-size: 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.tips {
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.tips:hover,
+.custom-btn:hover {
+  background-color: var(--Light-grayish-cyan);
+  /* background-color: hsl(183, 70%, 78%); */
+  color: var(--Very-dark-cyan);
+}
+
+/* .tips:active, */
+.custom-btn:active {
+  background-color: var(--Strong-cyan2);
+}
+
+.custom-btn {
+  color: var(--Grayish-cyan);
+  width: 100%;
+}
+
+.custom-input {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-item-2 {
+  background-color: var(--Very-dark-cyan);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  color: var(--White);
+  width: 23.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+/* .flex-item-2 .heads {
+} */
+
+.sub {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--Grayish-cyan);
+}
+
+.kilowatt-amount,
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.active {
+  background-color: var(--Strong-cyan) !important;
+  color: var(--color-2) !important;
+}
+
+.kilowatt-amount {
+  margin-bottom: 1.5rem;
+}
+
+.tip-result,
+.total-result {
+  font-size: 2.5rem;
+  color: var(--Strong-cyan);
+
+  font-weight: 600;
+}
+
+.rst-btn {
+  width: 100%;
+  background-color: var(--Strong-cyan3);
+  color: var(--Very-dark-cyan1);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.7rem 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.error-msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-msg :nth-child(2) {
+  color: var(--error-msg);
+}
+
+@media screen and (max-width: 462px) {
+  body {
+    padding-top: 10rem;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 2.5rem;
+    border-radius: 2rem;
+  }
+
+  .flex-item-1 {
+    width: 100%;
+  }
+
+  .flex-item-2 {
+    width: 100%;
+  }
+
+  .duration-btns {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .hours,
+  .custom-btn,
+  input {
+    /* padding: 1rem 0; */
+    font-size: 2rem;
+  }
+
+  .rst-btn {
+    font-size: 1.5rem;
+  }
+
+  .band-wrapper {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
